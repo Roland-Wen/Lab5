@@ -2,7 +2,7 @@
 
 window.addEventListener('DOMContentLoaded', init);
 var jsConfetti;
-var hornType, playButton, volumeSider;
+var hornType, playButton, volumeSlider;
 var imgFrame, audioFrame, volumeIcon;
 
 function init() {
