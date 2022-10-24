@@ -3,13 +3,15 @@
 window.addEventListener('DOMContentLoaded', init);
 var synth;
 var voices;
-var voiceSelect, talkButton, textArea;
+var voiceSelect, talkButton, textArea, imgArea;
 
 function init() {
     voiceSelect = document.getElementById("voice-select");
     talkButton = document.querySelector("#explore button");
     textArea = document.getElementById("text-to-speak");
+    imgArea = document.querySelector("#explore img");
     synth = window.speechSynthesis;
+    setInterval(checkStatus, 10);
 
     talkButton.addEventListener('click', speak);
 
@@ -39,4 +41,9 @@ function speak(e) {
         }
     }
     synth.speak(text);
+}
+
+function checkStatus() {
+    if (synth.speaking) imgArea.src = "assets/images/smiling-open.png";
+    else imgArea.src = "assets/images/smiling.png";
 }
