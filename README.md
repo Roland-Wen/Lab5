@@ -1,4 +1,4 @@
-# Lab 5 - Starter
+# Lab 5
 Roland Wen
 
 Expose: https://roland-wen.github.io/Lab5_Starter/expose.html
